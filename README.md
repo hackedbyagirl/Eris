@@ -31,8 +31,9 @@ Eris utilizes a set of modules and third-party terraform providers to create res
 ### Prerequisites
 - AWS Account - [Create AWS Account](https://www.aws.amazon.com/free)
 - [AWS CLI](https://aws.amazon.com/cli/) **
-- [Terraform](https://www.terraform.io/)
+- [Packer](https://www.packer.io/)
 - [Ansible](https://www.ansible.com/)
+- [Terraform](https://www.terraform.io/)
 
 ### Setup
 Instructions on how to get Eris configured locally.
