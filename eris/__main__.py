@@ -5,7 +5,7 @@ import os
 from .config import Config
 from .modules.build_image import Builder
 from .utils.colors import Color
-from eris import cli, __app_name__
+from eris import __app_name__
 
 try:
     from .config import Config
