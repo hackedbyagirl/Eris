@@ -8,7 +8,11 @@
 aws_region = "us-west-1"
 
 // AMI Configuration
-ami_name = "Kali-Eris-Build"
+ami_name     = "Kali-Eris-Build"
+ssh_user     = "test"
+defaults     = "./defaults.cfg"
+tmp_key_pair = "ed25519"
+subnet_tag   = "test-build"
 
 // Run Configuration
 inst_type  = "t2.medium"
