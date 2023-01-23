@@ -14,7 +14,7 @@
 
 ---
 
-<p align="center"> Automating resilient, reusable, and disposable offensive infrastructure utilizing terraform and ansible. 
+<p align="center"> Automating resilient, reusable, and disposable offensive infrastructure utilizing packer, ansible, and terraform. 
     <br> 
 </p>
 
