@@ -27,34 +27,6 @@
 ## About <a name = "about"></a>
 Eris utilizes a set of modules and third-party terraform providers to create resilient, reusable, and disposable offensive infrastructure.
 
-### Repository Structure
-```
-Eris/
-|__ templates/
-|__ |__ create_vpc.tf
-|__ |__ external_pentest.tf
-|__ |__ *.tf
-|__ data/
-|__ |__ scripts/
-|__ |__ ssh_configs/
-|__ |__ ssh_keys/
-|__ modules/
-|__ |__ aws/
-|__ |__ |__ create_vpc/
-|__ |__ |__ kali_ec2/
-|__ |__ digital_ocean/
-|__ ops/
-|__ |__ create_vpc/
-|__ |__ test1/
-|__ |__ test2/
-```
-
-Main Directories:
-- `templates`: Configuration templates related to specific operations
-- `data`: contains scripts, ssh data, and other data to be to be deployed to hosts
-- `modules`: Modules related to providers that contain the terraform code
-- `ops`: Directory to structure deployment
-
 ## Getting Started <a name = "getting_started"></a>
 ### Prerequisites
 - AWS Account - [Create AWS Account](https://www.aws.amazon.com/free)
@@ -81,7 +53,10 @@ export AWS_DEFAULT_REGION="default region"
 ```
 
 ## Usage <a name="usage"></a>
-TBD
+```bash
+sudo poetry install
+sudo poetry run python3 eris.py
+```
 
 ## Acknowledgements <a name = "acknowledgement"></a>
 Inspiration
