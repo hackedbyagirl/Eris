@@ -43,3 +43,5 @@ build {
     user = ""
     playbook_file = "../../ansible/kali_base.yml"
     use_proxy     = false
+  }
+}
