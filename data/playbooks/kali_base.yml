@@ -1,0 +1,19 @@
+---
+- hosts: all
+  name: Setup Base Configuration for Kali EC2
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Update apt
+      become: True
+      ansible.builtin.import_tasks: apt.yml
+
+    - name: Configure Environmental Settings
+      become: true
+      ansible.builtin.import_tasks: env.yml
+
+    - name: Download Binaries
+      become: True
+      ansible.builtin.import_tasks: binaries.yml
+
+

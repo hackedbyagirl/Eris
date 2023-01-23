@@ -1,0 +1,21 @@
+[tool]
+[tool.poetry]
+name = "eris"
+version = "0.6.9"
+homepage = "https://github.com/hackedbyagirl/eris"
+description = "Eris Test Python Package."
+authors = ["Brette Geary <hackedbg@outlook.com>"]
+readme = "README.md"
+packages = [{include = "eris"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+colored = "^1.4.4"
+argparse = "^1.4.0"
+black = "^22.12.0"
+pytest = "^7.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
