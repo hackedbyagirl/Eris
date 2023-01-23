@@ -60,6 +60,7 @@ sudo poetry run python3 eris.py
 
 ## Acknowledgements <a name = "acknowledgement"></a>
 Inspiration
+- [hackedbyagirl kali ami](https://github.com/hackedbyagirl/kali-packer-ami)
 - [Red Baron](https://github.com/byt3bl33d3r/Red-Baron)
 - [CISAGOV](https://github.com/cisagov/kali-packer)
 
