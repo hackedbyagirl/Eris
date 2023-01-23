@@ -41,7 +41,7 @@ build {
   
   provisioner "ansible" {
     user = ""
-    playbook_file = "../../ansible/kali_base.yml"
+    playbook_file = "../../data/playbooks/kali_base.yml"
     use_proxy     = false
   }
 }
