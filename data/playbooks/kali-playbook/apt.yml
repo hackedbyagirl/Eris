@@ -1,0 +1,66 @@
+---  
+- name: apt-update packages
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Remove useless packages from cache
+  ansible.builtin.apt:
+    autoclean: true
+- name: Install multiple apt packages
+  ansible.builtin.apt:
+    update_cache: yes
+    force_apt_get: yes
+    install_recommends: yes
+    name: "{{ item }}"
+    state: latest 
+  loop: 
+    - awscli
+    - build-essential
+    - chromium
+    - docker.io
+    - docker-compose
+    - dnsutils
+    - gem
+    - golang
+    - jq
+    - libffi-dev
+    - libpcap-dev
+    - libssl-dev
+    - libbz2-dev 
+    - libreadline-dev
+    - libsqlite3-dev 
+    - libncurses5-dev 
+    - libncursesw5-dev
+    - liblzma-dev 
+    - libguestfs-tools
+    - libssl-dev
+    - libwacom-common
+    - libkrb5-dev
+    - llvm
+    - ncat
+    - nbtscan-unixwiz
+    - neo4j
+    - npm
+    - openvpn
+    - parallel
+    - python3-setuptools
+    - python3-openssl
+    - python3-pip
+    - python3-venv
+    - tightvncserver
+    - tk-dev
+    - vim
+    - xfce4
+    - xfce4-goodies
+    - xz-utils
+    - zlib1g-dev
+    - zsh
+    - zsh-syntax-highlighting
+
+- name: Remove useless packages from cache
+  ansible.builtin.apt:
+    autoclean: true
+
+- name: Remove package dependencies that are no longer required 
+  ansible.builtin.apt:
+    autoremove: true        
