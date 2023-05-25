@@ -6,6 +6,7 @@
 - name: Remove useless packages from cache
   ansible.builtin.apt:
     autoclean: true
+
 - name: Install multiple apt packages
   ansible.builtin.apt:
     update_cache: yes
