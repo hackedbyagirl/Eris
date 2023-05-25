@@ -1,0 +1,14 @@
+---
+- name: Download Aquatone Pre-compiled Binaries -- Unzip Files
+  ansible.builtin.unarchive:
+    src: "https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip"
+    dest: /usr/bin
+    remote_src: yes
+    mode: 0755
+
+- name: Download Assetfinder Pre-compiled Binaries -- Unzip Files
+  ansible.builtin.unarchive:
+    src: "https://github.com/tomnomnom/assetfinder/releases/download/v0.1.1/assetfinder-linux-amd64-0.1.1.tgz"
+    dest: /usr/bin
+    remote_src: yes
+    mode: 0755
