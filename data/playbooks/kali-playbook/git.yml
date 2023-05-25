@@ -1,0 +1,8 @@
+---
+# Downloading and setting up git repos
+- name: Begin Installing Github Repos and Setting up Permissions
+  become_user: "{{ user }}"
+  vars:
+    - user: bnastee 
+  
+  
