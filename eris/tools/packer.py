@@ -7,7 +7,7 @@ from ..utils.cmds import Command, CmdTest
 class Packer(Dependency):
     dep_name = 'packer'
     dep_required = True
-    
+
     '''
     Packer CLI Wrapper
     - Packer executable is determined in config
@@ -16,14 +16,14 @@ class Packer(Dependency):
 
     def __init__(self, packer_executable=None, pwd=None):
         if packer_executable is None:
-            self.packer_executable = Config.packer_executable 
+            self.packer_executable = Config.packer_executable
         else:
             self.packer_executable = packer_executable
 
         packer_cmd = [self.packer_executable]
         init_cmd = ['init', '.']
         validate_cmd = ['validate', '.']
-        build_cmd = ['build', '.'] 
+        build_cmd = ['build', '.']
         self.pwd = pwd
 
         self.execute(packer_cmd, init_cmd)
@@ -38,7 +38,7 @@ class Packer(Dependency):
         build_command.extend(cmd)
 
         self.execute_cmd(build_command)
-        
+
     def execute_cmd(self, cmd):
         exe = CmdTest()
         output = exe.execute_cmd(cmd, self.pwd)
