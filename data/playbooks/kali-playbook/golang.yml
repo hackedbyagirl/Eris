@@ -1,0 +1,16 @@
+---
+- name: Begin Installing Golang tools
+  become_user: "{{ user }}"
+  vars:
+    - user: bnastee 
+  block:
+    - name: Installing Go Tools
+      ansible.builtin.command:
+        cmd: go install -v "{{ item }}"
+      loop:
+        - github.com/projectdiscovery/httpx/cmd/httpx@latest
+        - github.com/projectdiscovery/katana/cmd/katana@latest
+        - github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+        - github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+        - github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+        - github.com/tomnomnom/waybackurls@latest
