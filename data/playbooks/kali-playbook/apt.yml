@@ -21,6 +21,7 @@
     - docker.io
     - docker-compose
     - dnsutils
+    - easy-rsa
     - gem
     - golang
     - jq
